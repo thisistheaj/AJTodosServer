@@ -1,15 +1,20 @@
-'use strict';
-angular.module('mainApp', ['ui.router','mainApp.mainCtrl'])
+angular.module('AJTodos', ['ui.router','AJTodos.controllers'])
 
     .config(function($stateProvider, $urlRouterProvider) {
-
         $stateProvider
-            .state('state1', {
-                url: "/state1",
-                templateUrl: "views/state1.html",
-                controller: "mainCtrl"
+
+            .state('loginview', {
+                url: '/loginview',
+                controller: 'LoginViewController',
+                templateUrl: 'views/loginview.html'
+            })
+
+            .state('listview', {
+                url: '/listview/:userName',
+                controller: 'ListViewController',
+                templateUrl: 'views/listview.html'
             });
 
-        $urlRouterProvider.otherwise("/state1");
+        $urlRouterProvider.otherwise('/loginview');
 
     });

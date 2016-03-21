@@ -1,0 +1,19 @@
+<h1>{{userName}}'s To-dos</h1>
+<!--todo: add back button-->
+<button ng-click="showPopup()">
+    <!--todo: add symbol for button-->
+    add
+</button>
+<ul>
+    <li ng-repeat="todo in data.data" >
+        <div>
+            <label>
+                <input type="checkbox" ng-model="todo.completed">
+            </label>
+            {{todo.item}}
+            <button ng-click="remove(todo)">
+                Remove
+            </button>
+        </div>
+    </li>
+</ul>
