@@ -1,9 +1,12 @@
 <h1>{{userName}}'s To-dos</h1>
-<!--todo: add back button-->
+<hr />
+<button ui-sref="loginview">
+    back
+</button>
 <button ng-click="showPopup()">
-    <!--todo: add symbol for button-->
     add
 </button>
+<hr />
 <ul>
     <li ng-repeat="todo in data.data" >
         <div>

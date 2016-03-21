@@ -35,34 +35,10 @@ angular.module('AJTodos.controllers', [])
             $scope.data.data.push(item);
         };
 
-        //todo: figure out what to do instead
-        // $scope.showPopup = function() {
-        //     $scope.temp = {};
-        //
-        //     // Custom popup
-        //     $ionicPopup.prompt({
-        //         template: '<input type = "text" ng-model = "temp.model">',
-        //         title: 'Add Item',
-        //         subTitle: 'What do you need to do?',
-        //         scope: $scope,
-        //
-        //         buttons: [
-        //             { text: 'Cancel',
-        //                 type: 'button-outline button-balanced'
-        //             }, {
-        //                 text: '<b>Add</b>',
-        //                 type: 'button-royal',
-        //                 onTap: function(e) {
-        //                     if (!$scope.temp.model) {
-        //                         e.preventDefault();
-        //                     } else {
-        //                         $scope.add({item: $scope.temp.model,completed: false});
-        //                     }
-        //                 }
-        //             }
-        //         ]
-        //     });
-        // };
+        $scope.showPopup = function() {
+            $scope.temp = prompt('What else do you need to do?');
+            $scope.add({item: $scope.temp,completed: false});
+        };
 
     })
 
