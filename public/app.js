@@ -1,4 +1,8 @@
-angular.module('AJTodos', ['ui.router','AJTodos.controllers'])
+angular.module('AJTodos', [
+    'ui.router',
+    'AJTodos.LoginViewController',
+    'AJTodos.ListViewController',
+])
 
     .config(function($stateProvider, $urlRouterProvider) {
         $stateProvider
