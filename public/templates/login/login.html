@@ -1,0 +1,37 @@
+<h1>AJTodos</h1>
+<hr/>
+<div>
+    <ul>
+        <li>
+            <span>Username:</span>
+            <input type="text" ng-model="login.userNameLogin" placeholder="Username">
+        </li>
+        <li>
+            <span>Password:</span>
+            <input type="password" ng-model="login.passwordLogin" placeholder="password">
+        </li>
+    </ul>
+    <hr/>
+    <button ng-click="login.loginUser(login.userNameLogin,login.passwordLogin)">
+        <span>Sign In</span>
+    </button>
+</div>
+
+<hr/>
+<div>
+    <ul>
+        <li>
+            <span>Username:</span>
+            <input type="text" ng-model="login.userNameCreate" placeholder="Username">
+        </li>
+        <li>
+            <span>Password:</span>
+            <input type="password" ng-model="login.passwordCreate" placeholder="password">
+        </li>
+    </ul>
+    <hr/>
+    <button ng-click="login.createUser(login.userNameCreate,login.passwordCreate)">
+        <span>Sign Up</span>
+    </button>
+
+</div>

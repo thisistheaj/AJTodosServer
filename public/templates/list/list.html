@@ -1,20 +1,20 @@
-<h1>{{userName}}'s To-dos</h1>
+<h1>{{list.data.userName}}'s To-dos</h1>
 <hr />
 <button ui-sref="loginview">
     back
 </button>
-<button ng-click="showPopup()">
+<button ng-click="list.showPopup()">
     add
 </button>
 <hr />
 <ul>
-    <li ng-repeat="todo in data.data" >
+    <li ng-repeat="todo in list.data.data" >
         <div>
             <label>
                 <input type="checkbox" ng-model="todo.completed">
             </label>
             {{todo.item}}
-            <button ng-click="remove(todo)">
+            <button ng-click="list.remove(todo)">
                 Remove
             </button>
         </div>

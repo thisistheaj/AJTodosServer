@@ -1,24 +1,25 @@
-angular.module('AJTodos', [
-    'ui.router',
-    'AJTodos.LoginViewController',
-    'AJTodos.ListViewController',
-])
+(function () {
+    'use strict';
 
-    .config(function($stateProvider, $urlRouterProvider) {
-        $stateProvider
+    angular.module('AJTodos')
 
-            .state('loginview', {
-                url: '/loginview',
-                controller: 'LoginViewController',
-                templateUrl: 'views/loginview.html'
-            })
+        .config(function ($stateProvider, $urlRouterProvider) {
 
-            .state('listview', {
-                url: '/listview/:userName',
-                controller: 'ListViewController',
-                templateUrl: 'views/listview.html'
-            });
+            $stateProvider
+                .state('loginview', {
+                    url: '/loginview',
+                    controller: 'LoginController',
+                    controllerAs: 'login',
+                    templateUrl: 'templates/login/login.html'
+                })
+                .state('listview', {
+                    url: '/listview',
+                    controller: 'ListController',
+                    controllerAs: 'list',
+                    templateUrl: 'templates/list/list.html'
+                });
 
-        $urlRouterProvider.otherwise('/loginview');
+            $urlRouterProvider.otherwise('/loginview');
 
-    });
+        });
+})();
